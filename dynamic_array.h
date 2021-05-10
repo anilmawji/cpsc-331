@@ -4,11 +4,13 @@ typedef struct Array {
     size_t capacity;
 } Array;
 
-void arrayInit(Array*, size_t);
+Array arrayInit(Array*, size_t);
 
 int arrayIsEmpty(Array*);
 
 void arrayInsert(Array*, int);
+
+void arrayInsertAll(Array*, int, int*);
 
 int arrayRemoveAt(Array*, size_t);
 
@@ -21,5 +23,7 @@ int arrayContains(Array*, int);
 void arrayClear(Array*);
 
 char* arrayToString(Array*);
+
+void arrayPrint(Array*);
 
 void arrayFree(Array*);
