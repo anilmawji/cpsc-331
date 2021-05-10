@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "dynamic_array.h"
 
-Array arrayInit(size_t capacity) {
+Array arrayCreate(size_t capacity) {
     if (capacity < 0) capacity = 0;
 
     Array a;
