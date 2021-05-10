@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include "dynamic_array.h"
 
-Array arrayInit(Array* a, size_t capacity) {
-    if (capacity < 0) printf("Error: Illegal array size: %d", capacity);
+Array arrayInit(size_t capacity) {
+    Array a;
+    
+    a.array = malloc(capacity * sizeof(int));
+    a.length = 0;
+    a.capacity = capacity;
 
-    a->array = malloc(capacity * sizeof(int));
-    a->length = 0;
-    a->capacity = capacity;
-
-    return *a;
+    return a;
 }
 
 int arrayIsEmpty(Array* a) {
@@ -32,10 +32,6 @@ void arrayInsertAll(Array* a, int numValues, int* values) {
 }
 
 int arrayRemoveAt(Array* a, size_t rm_index) {
-    if (rm_index >= a->length || rm_index < 0) {
-        printf("Error: Illegal array index: %d", rm_index);
-    }
-
     int rm_value = a->array[rm_index];
     int* newArray = malloc((a->length - 1) * sizeof(int));
 
