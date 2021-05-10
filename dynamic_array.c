@@ -45,10 +45,10 @@ int arrayRemove(Array* a, int value) {
     for (int i = 0; i < a->length; i++) {
         if (a->array[i] == value) {
             arrayRemoveAt(a, i);
-            return 0;
+            return 1;
         }
     }
-    return 1;
+    return 0;
 }
 
 int arrayIndexOf(Array* a, int value) {
@@ -72,7 +72,7 @@ void arrayClear(Array* a) {
 
 char* arrayToString(Array* a) {
     if (a->length == 0) return "[]";
-  
+
     char* str = (char*) malloc(128);
     char* ptr = str+1;  
 
