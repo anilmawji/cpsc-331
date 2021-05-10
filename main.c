@@ -5,7 +5,7 @@
 
 int main() {
     Array a = arrayInit(3);
-    arrayInsertAll(&a, 3, (int[]){2, 6, 1});
+    arrayInsertAll(&a, 6, (int[]){2, 6, 1, 4, 5, 3});
 
     arrayPrint(&a);
     insertionSort(a.array, a.length);
