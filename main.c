@@ -5,12 +5,8 @@
 
 int main() {
     Array a = arrayInit(&a, 3);
-    arrayInsert(&a, 2);
-    arrayInsert(&a, 6);
-    arrayInsert(&a, 1);
-    arrayInsert(&a, 4);
-    arrayInsert(&a, 5);
-    arrayInsert(&a, 3);
+
+    arrayInsertAll(&a, 6, (int[]){2, 6, 1, 4, 5, 3});
     arrayPrint(&a);
 
     insertionSort(a.array, a.length);
