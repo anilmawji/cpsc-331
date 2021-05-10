@@ -4,7 +4,7 @@ typedef struct Array {
     size_t capacity;
 } Array;
 
-Array arrayInit(Array*, size_t);
+Array arrayCreate(Array*, size_t);
 
 int arrayIsEmpty(Array*);
 
