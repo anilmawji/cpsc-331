@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dynamic_array.h"
-#include "sorting.h"
+#include "sorting_algs.h"
 
 int main() {
     Array a = arrayInit(3);
