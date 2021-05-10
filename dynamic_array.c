@@ -3,8 +3,9 @@
 #include "dynamic_array.h"
 
 Array arrayInit(size_t capacity) {
+    if (capacity < 0) capacity = 0;
+
     Array a;
-    
     a.array = malloc(capacity * sizeof(int));
     a.length = 0;
     a.capacity = capacity;
@@ -101,3 +102,4 @@ void arrayFree(Array* a) {
     a->array = NULL;
     a->length = a->capacity = 0;
 }
+
