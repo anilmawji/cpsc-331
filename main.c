@@ -4,7 +4,7 @@
 #include "sorting_algs.h"
 
 int main() {
-    Array a = arrayInit(3);
+    Array a = arrayCreate(3);
     arrayInsertAll(&a, 6, (int[]){2, 6, 1, 4, 5, 3});
 
     arrayPrint(&a);
