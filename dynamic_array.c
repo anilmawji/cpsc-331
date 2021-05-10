@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include "dynamic_array.h"
 
-void arrayInit(Array* a, size_t capacity) {
+Array arrayInit(Array* a, size_t capacity) {
     if (capacity < 0) printf("Error: Illegal array size: %d", capacity);
 
     a->array = malloc(capacity * sizeof(int));
     a->length = 0;
     a->capacity = capacity;
+
+    return *a;
 }
 
 int arrayIsEmpty(Array* a) {
@@ -20,6 +22,13 @@ void arrayInsert(Array* a, int value) {
         a->array = realloc(a->array, a->capacity * sizeof(int));
     }
     a->array[a->length++] = value;
+}
+
+void arrayInsertAll(Array* a, int numValues, int* values) {
+    for (int i = 0; i < numValues; i++) {
+        arrayInsert(a, *(values + i));
+    }
+    free(values);
 }
 
 int arrayRemoveAt(Array* a, size_t rm_index) {
@@ -83,6 +92,12 @@ char* arrayToString(Array* a) {
     ptr += sprintf(ptr, "%d]", a->array[a->length - 1]);
 
     return str;
+}
+
+void arrayPrint(Array* a) {
+    char* str = arrayToString(a);
+    printf("%s\n", str);
+    free(str);
 }
 
 void arrayFree(Array* a) {
