@@ -1,5 +1,5 @@
 /**
- * CPSC 331 Assignment 2 Q4
+ * CPSC 331 Assignment 2
  * Red-Black tree implementation
  * 
  * Name: Anil Mawji
