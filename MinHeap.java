@@ -1,5 +1,9 @@
-//Name: Anil MAwji
-//UCID: 30099809
+/**
+ * CPSC 331 Assignment 1
+ * 
+ * Name: Anil Mawji
+ * UCID: 30099809
+ */
 
 public class MinHeap implements PriorityQueue {
 
