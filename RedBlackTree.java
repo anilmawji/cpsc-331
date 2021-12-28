@@ -234,15 +234,15 @@ public class RedBlackTree implements Dictionary {
         else return node;
     }
 
-   	 public Node minimum(Node node) {
+   	public Node minimum(Node node) {
 		while (node.left != TNULL) {
-			node = node.left;
+		    node = node.left;
 		}
 		return node;
 	}
 
 	public void rightRotate(Node x) {
-		Node y = x.left;
+        Node y = x.left;
 		x.left = y.right;
 
 		if (y.right != TNULL) {
