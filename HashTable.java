@@ -1,3 +1,11 @@
+
+/**
+ * CPSC 331 Assignment 3
+ * 
+ * Name: Anil Mawji
+ * UCID: 30099809
+ */
+
 public class HashTable implements Dictionary {
 
     private static final int CAPACITY = 17;
