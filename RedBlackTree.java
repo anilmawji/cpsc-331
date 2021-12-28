@@ -1,6 +1,5 @@
 /**
  * CPSC 331 Assignment 2
- * Red-Black tree implementation
  * 
  * Name: Anil Mawji
  * UCID: 30099809
