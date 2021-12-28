@@ -234,7 +234,7 @@ public class RedBlackTree implements Dictionary {
         else return node;
     }
 
-    public Node minimum(Node node) {
+   	 public Node minimum(Node node) {
 		while (node.left != TNULL) {
 			node = node.left;
 		}
