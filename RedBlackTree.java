@@ -1,5 +1,3 @@
-package ca.ucalgary.cpsc331;
-
 /**
  * CPSC 331 Assignment 2 Q4
  * Red-Black tree implementation
