@@ -1,5 +1,3 @@
-package ca.ucalgary.cpsc331;
-
 //Name: Anil MAwji
 //UCID: 30099809
 
