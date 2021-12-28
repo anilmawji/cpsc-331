@@ -33,7 +33,7 @@ public class RedBlackTree implements Dictionary {
 
     public RedBlackTree() {
         this.TNULL = new Node();
-	this.TNULL.color = Color.BLACK;
+		this.TNULL.color = Color.BLACK;
         this.TNULL.left = null;
         this.TNULL.right = null;
 		this.root = TNULL;
